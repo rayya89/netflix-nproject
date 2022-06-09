@@ -1,22 +1,23 @@
 //NPM packages
 import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
 
 //Project files
 import "./styles/styles.css";
-import Signup from "./pages/Signup";
-import Registration from "./pages/Registration";
-import Login from "./pages/Login";
+import { useUser } from "./state/UserContext";
+import AdminRoutes from "./routes/AdminRoutes";
+import MembersRoutes from "./routes/MembersRoutes";
+import UnloggedRoutes from "./routes/UnloggedRoutes";
 
 export default function App() {
+  //Global state
+  const { user } = useUser();
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="/signup/regform" element={<Registration />} />
-        </Routes>
+        {user && user.role === "member" && <MembersRoutes />}
+        {user && user.role === "admin" && <AdminRoutes />}
+        {!user && <UnloggedRoutes />}
       </BrowserRouter>
     </div>
   );
