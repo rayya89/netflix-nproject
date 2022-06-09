@@ -50,7 +50,7 @@ export default function Login() {
           <InputField setup={form.password} state={[password, setPassword]} />
           <button>Sign in</button>
         </form>
-        <Link to="/LoginHelp">Need help?</Link>
+        <Link to="/loginHelp">Need help?</Link>
         <p>New to Netflix?</p>
         <Link to="/signup">Sign up now</Link>
       </div>
