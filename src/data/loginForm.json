@@ -1,0 +1,12 @@
+{
+  "email": {
+    "label": "",
+    "placeholder": "Email",
+    "type": "email"
+  },
+  "password": {
+    "label": "",
+    "placeholder": "Password",
+    "type": "password"
+  }
+}
