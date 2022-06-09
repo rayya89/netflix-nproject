@@ -1,0 +1,17 @@
+{
+  "email": {
+    "label": "",
+    "placeholder": "Email address",
+    "type": "email"
+  },
+  "password": {
+    "label": "",
+    "placeholder": "Add a password",
+    "type": "password"
+  },
+  "filled_email": {
+    "label": "",
+    "placeholder": "Email address",
+    "type": "email"
+  }
+}
