@@ -6,12 +6,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { UserProvider } from "./state/UserContext";
 import { ModalProvider } from "./state/ModalContext";
+import { ItemsProvider } from "./state/ItemsContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserProvider>
     <ModalProvider>
-      <App />
+      <ItemsProvider>
+        <App />
+      </ItemsProvider>
     </ModalProvider>
   </UserProvider>
 );

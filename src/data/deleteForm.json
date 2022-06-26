@@ -1,0 +1,7 @@
+{
+  "compare": {
+    "label": "Write the name of the title",
+    "placeholder": "Type the exactly as it is",
+    "type": "text"
+  }
+}

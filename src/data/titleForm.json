@@ -1,0 +1,42 @@
+{
+  "name": {
+    "label": "Name",
+    "placeholder": "",
+    "type": "text"
+  },
+  "desc": {
+    "label": "Description",
+    "placeholder": "",
+    "type": "text"
+  },
+  "imageURL": {
+    "label": "Image URL",
+    "placeholder": "",
+    "type": "text"
+  },
+  "thumbURL": {
+    "label": "Thumbnail URL",
+    "placeholder": "",
+    "type": "text"
+  },
+  "logoURL": {
+    "label": "Logo URL",
+    "placeholder": "",
+    "type": "text"
+  },
+  "year": {
+    "label": "Year",
+    "placeholder": "",
+    "type": "number"
+  },
+  "ranking": {
+    "label": "Ranking",
+    "placeholder": "",
+    "type": "text"
+  },
+  "link": {
+    "label": "Link (Letters after 'v=' in a youtube video link)",
+    "placeholder": "Ex: GOuwOI-WSkE",
+    "type": "text"
+  }
+}
