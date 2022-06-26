@@ -5,10 +5,13 @@ import ReactDOM from "react-dom/client";
 // Project files
 import App from "./App";
 import { UserProvider } from "./state/UserContext";
+import { ModalProvider } from "./state/ModalContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserProvider>
-    <App />
+    <ModalProvider>
+      <App />
+    </ModalProvider>
   </UserProvider>
 );

@@ -9,7 +9,7 @@ import form from "../data/signupForm.json";
 import { useUser } from "../state/UserContext";
 import { onFail } from "../scripts/onFail";
 import { createUser } from "../scripts/firebaseAuth";
-import { createDocumentWithId, getDocument } from "../scripts/fireStore";
+import { createDocumentWithId, readDocument } from "../scripts/fireStore";
 
 export default function Registration() {
   //Global state
@@ -43,7 +43,7 @@ export default function Registration() {
   }
 
   async function getUserData(UID) {
-    const userData = await getDocument("users", UID);
+    const userData = await readDocument("users", UID);
     return userData;
   }
 

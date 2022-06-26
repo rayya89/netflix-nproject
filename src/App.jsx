@@ -7,6 +7,7 @@ import { useUser } from "./state/UserContext";
 import AdminRoutes from "./routes/AdminRoutes";
 import MembersRoutes from "./routes/MembersRoutes";
 import UnloggedRoutes from "./routes/UnloggedRoutes";
+import Modal from "./components/Modal";
 
 export default function App() {
   //Global state
@@ -19,6 +20,7 @@ export default function App() {
         {user && user.role === "admin" && <AdminRoutes />}
         {!user && <UnloggedRoutes />}
       </BrowserRouter>
+      <Modal />
     </div>
   );
 }
