@@ -1,0 +1,77 @@
+.login {
+  background-color: black;
+  height: 100vh;
+  padding: var(--space-small) var(--space-big);
+}
+
+.login .logo {
+  margin-top: var(--space-big);
+  width: 75px;
+}
+
+.login .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form .button {
+  margin-top: var(--space-big);
+  margin-bottom: var(--space-small);
+}
+
+.login h1 {
+  margin-bottom: var(--space-medium);
+}
+
+.signup-link {
+  margin-top: var(--space-ultra);
+  display: flex;
+  align-items: center;
+  gap: var(--space-small);
+}
+
+@media (min-width: 750px) {
+  .login {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/src/assets/pictures/login-background.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .login header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0,
+      rgba(0, 0, 0, 0) 100%
+    );
+    height: 90px;
+    margin-bottom: var(--space-medium);
+  }
+
+  .login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: var(--space-ultra);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 480px;
+    width: 380px;
+    margin-top: var(--space-ultra);
+  }
+
+  .login .logo {
+    padding-left: var(--space-ultra);
+    padding-top: var(--space-ultra);
+    height: 45px;
+    width: 167px;
+  }
+}

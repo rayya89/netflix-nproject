@@ -1,3 +1,55 @@
+@font-face {
+  font-family: "Netflix Sans";
+  src: url("/src/assets/fonts/NetflixSansRegular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Netflix Sans", sans-serif;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothong: greyscale;
+  color: var(--color-text);
+  height: 100%;
+}
+
+.App {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 80px;
+  /* min-height: 44px; */
+  margin: 0;
+  padding: var(--space-small) var(--space-big);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: "Netflix Sans", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
 .logo {
   height: auto;
   width: 135px;

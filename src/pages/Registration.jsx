@@ -49,23 +49,27 @@ export default function Registration() {
 
   async function onSuccess(userData) {
     setUser(userData);
-    navigate("/dashboard");
+    navigate("/browse");
   }
 
   return (
-    <div>
+    <div className="registration">
       <header>
         <img className="logo" src={logo} alt="Netflix" />
-        <Link to="/">Sign In</Link>
+        <Link className="link" to="/">
+          Sign In
+        </Link>
       </header>
-      <h1>Create a password to start your membership</h1>
-      <p>Just one more step and you're finished!</p>
-      <p>We hate paperwork, too.</p>
-      <form className="form" onSubmit={onSignup}>
-        <InputField setup={form.filled_email} state={[email, setEmail]} />
-        <InputField setup={form.password} state={[password, setPassword]} />
-        <button>Create account</button>
-      </form>
+      <div className="content">
+        <h1>Create a password to start your membership</h1>
+        <p>Just one more step and you're finished!</p>
+        <p>We hate paperwork, too.</p>
+        <form className="form" onSubmit={onSignup}>
+          <InputField setup={form.filled_email} state={[email, setEmail]} />
+          <InputField setup={form.password} state={[password, setPassword]} />
+          <button className="button">Create account</button>
+        </form>
+      </div>
     </div>
   );
 }

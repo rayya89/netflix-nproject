@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useItems } from "../state/ItemsContext";
 import { useModal } from "../state/ModalContext";
 import { deleteDocument } from "../scripts/fireStore";
+import { deleteFile } from "../scripts/cloudStorage";
 import InputField from "../components/InputField";
 import form from "../data/deleteForm.json";
 
@@ -14,6 +15,9 @@ export default function DeleteTitleForm({ item, category }) {
 
   //Properties
   const path = `titles/${category}/content`;
+  const imagePath = `${category}/${item.name}-image.png`;
+  const logoPath = `${category}/${item.name}-logo.png`;
+  const thumbnailPath = `${category}/${item.name}-thumbnail.png`;
 
   // Local state
   const [compare, setCompare] = useState("");
@@ -28,6 +32,10 @@ export default function DeleteTitleForm({ item, category }) {
     } else {
       alert("The name does not match");
     }
+
+    const imageDeleted = await deleteFile(imagePath).catch(onFail);
+    const logoDeleted = await deleteFile(logoPath).catch(onFail);
+    const thumbnailDeleted = await deleteFile(thumbnailPath).catch(onFail);
   }
 
   function onSuccess(id) {

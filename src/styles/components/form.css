@@ -1,0 +1,39 @@
+.form {
+  box-sizing: border-box;
+  padding-top: var(--space-medium);
+  padding-bottom: var(--space-medium);
+}
+
+.input-field {
+  margin-bottom: var(--space-small);
+}
+
+.form button {
+  margin-top: var(--space-medium);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  font-weight: bold;
+  margin-bottom: var(--space-small);
+}
+
+input {
+  box-sizing: border-box;
+  max-width: 475px;
+  height: 44px;
+  padding: var(--space-small) var(--space-medium);
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  background-color: var(--swatch-grey);
+}
+
+input:active {
+  border: none;
+  outline: none;
+}

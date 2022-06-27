@@ -21,20 +21,24 @@ export default function Signup() {
   }
 
   return (
-    <div>
+    <div className="signup">
       <header>
         <img className="logo" src={logo} alt="Netflix" />
-        <Link to="/">Sign In</Link>
+        <Link className="button signIn" to="/">
+          Sign In
+        </Link>
       </header>
-      <h1>Unlimited films, TV programmes and more.</h1>
-      <h2>Watch anywhere. Cancel at any time.</h2>
-      <p>
-        Ready to watch? Enter your email to create or restart your membership.
-      </p>
-      <form className="form" onSubmit={onSubmit}>
-        <InputField setup={form.email} state={[email, setEmail]} />
-        <button>Get Started</button>
-      </form>
+      <div className="content">
+        <h1>Unlimited films, TV programmes and more.</h1>
+        <h2>Watch anywhere. Cancel at any time.</h2>
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <form className="form" onSubmit={onSubmit}>
+          <InputField setup={form.email} state={[email, setEmail]} />
+          <button className="button">Get Started</button>
+        </form>
+      </div>
     </div>
   );
 }

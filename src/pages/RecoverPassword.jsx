@@ -13,15 +13,19 @@ export default function RecoverPassword() {
   const [sent, setSent] = useState(false);
 
   return (
-    <div>
+    <div className="recover-password">
       <header>
         <img className="logo" src={logo} alt="Netflix" />
-        <Link to="/">Sign In</Link>
+        <Link className="link" to="/">
+          Sign In
+        </Link>
       </header>
-      {!sent && (
-        <RecoverForm emailState={[email, setEmail]} setSent={setSent} />
-      )}
-      {sent && <EmailSent email={email} />}
+      <div className="content">
+        {!sent && (
+          <RecoverForm emailState={[email, setEmail]} setSent={setSent} />
+        )}
+        {sent && <EmailSent email={email} />}
+      </div>
     </div>
   );
 }

@@ -39,20 +39,26 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="login">
       <header>
         <img className="logo" src={logo} alt="Netflix" />
       </header>
-      <div>
+      <div className="login-form">
         <h1>Sign In</h1>
         <form className="form" onSubmit={onLogin}>
           <InputField setup={form.email} state={[email, setEmail]} />
           <InputField setup={form.password} state={[password, setPassword]} />
-          <button>Sign in</button>
+          <button className="button">Sign in</button>
         </form>
-        <Link to="/loginHelp">Need help?</Link>
-        <p>New to Netflix?</p>
-        <Link to="/signup">Sign up now</Link>
+        <Link className="link" to="/loginHelp">
+          Need help?
+        </Link>
+        <section className="signup-link">
+          <p>New to Netflix?</p>
+          <Link className="link" to="/signup">
+            Sign up now
+          </Link>
+        </section>
       </div>
     </div>
   );
