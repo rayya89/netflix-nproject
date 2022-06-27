@@ -7,9 +7,9 @@ export default function TitleCategory({ category, list }) {
   ));
 
   return (
-    <section>
+    <section className="title-category">
       <h2>{category}</h2>
-      {categoryList}
+      <div className="category">{categoryList}</div>
     </section>
   );
 }

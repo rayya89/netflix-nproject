@@ -9,7 +9,7 @@ export default function ImageInput({ label, setter }) {
   }
 
   return (
-    <label>
+    <label className="image-input">
       <span>{label}</span>
       <input type="file" accept={imageFormats} onChange={onImageChoose} />
     </label>

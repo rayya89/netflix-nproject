@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 
 // Project files
+
 import { readCollection } from "../scripts/fireStore";
 import { onFail } from "../scripts/onFail";
 import TitleCategory from "../components/TitleCategory";
@@ -48,12 +49,14 @@ export default function Browse() {
   if (status === 2) return <p>error</p>;
 
   return (
-    <div>
+    <div className="browse">
       <BrowseHero />
-      <TitleCategory category="Films" list={films} />
-      <TitleCategory category="Series" list={series} />
-      <TitleCategory category="Documentaries" list={documentaries} />
-      <TitleCategory category="Top 10 in Sweden Today" list={topTen} />
+      <section className="categories">
+        <TitleCategory category="Films" list={films} />
+        <TitleCategory category="Series" list={series} />
+        <TitleCategory category="Documentaries" list={documentaries} />
+        <TitleCategory category="Top 10 in Sweden Today" list={topTen} />
+      </section>
     </div>
   );
 }

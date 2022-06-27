@@ -37,3 +37,8 @@ input:active {
   border: none;
   outline: none;
 }
+
+.image-input {
+  display: flex;
+  flex-direction: column;
+}

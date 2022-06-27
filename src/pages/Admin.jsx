@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Admin() {
   return (
-    <div>
+    <div className="admin">
       <h1>Netflix Admin Interface</h1>
       <h2>Choose a category to edit its content</h2>
       <Link to="/admin/films">Films</Link>

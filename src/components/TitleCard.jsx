@@ -7,7 +7,7 @@ export default function TitleCard({ item, category }) {
   const { setModal } = useModal();
 
   return (
-    <div>
+    <div className="title-card">
       <img
         onClick={() => setModal(<TitleModal item={item} category={category} />)}
         src={thumbnailURL}

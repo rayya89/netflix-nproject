@@ -6,9 +6,12 @@
 
 /* Components */
 @import "./components/form.css";
+@import "./components/Modal.css";
 
 /* Pages */
 @import "./pages/Login.css";
 @import "./pages/Signup.css";
 @import "./pages/Registration.css";
 @import "./pages/RecoverPassword.css";
+@import "./pages/Admin.css";
+@import "./pages/Browse.css";

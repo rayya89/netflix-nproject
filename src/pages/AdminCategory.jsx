@@ -46,7 +46,7 @@ export default function AdminCategory() {
   ));
 
   return (
-    <div>
+    <div className="admin-category">
       <h2>Here are the current titles in the {category} category</h2>
       <div>
         {items.length === 0 && <EmptyMessage />}
